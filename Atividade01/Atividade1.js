@@ -9,7 +9,7 @@ const cigarrosPorDia = Number(prompt("Digite quantos cigarros você fuma por dia
 const anosFumando = Number(prompt("Digite quantos anos faz que você fuma: "));
 
 function isNumber(number) {
-    return !isNaN(number);
+    return !isNaN(number) && number > 0;
 }
 
 function minutosPorDia(cigarrosPorDia) {

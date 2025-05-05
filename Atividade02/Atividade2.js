@@ -17,7 +17,7 @@ function verificarMulta(velocidade){
 }
 
 function ehNumeroValido(velocidade){
-    return !isNaN(velocidade)
+    return !isNaN(velocidade) && velocidade > 0;
 }
 
 if(ehNumeroValido(velocidade)){
