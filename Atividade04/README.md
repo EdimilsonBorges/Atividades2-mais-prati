@@ -44,17 +44,3 @@ Digite o segundo lado do triângulo: 7
 Digite o terceiro lado do triângulo: 3
 É triângulo.
 ```
-
-## ⚠ Observação
-
-A função de validação `eNumeroValido()` possui um pequeno erro lógico. A condição correta para validação deveria usar `&&` no lugar de `||`, e também garantir que os valores sejam **positivos** e **numéricos**. Uma sugestão seria:
-
-```js
-function eNumeroValido() {
-  return (
-    !isNaN(ladoA) && ladoA > 0 &&
-    !isNaN(ladoB) && ladoB > 0 &&
-    !isNaN(ladoC) && ladoC > 0
-  );
-}
-```

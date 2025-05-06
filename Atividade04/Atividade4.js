@@ -10,7 +10,7 @@ const ladoB = Number(prompt("Digite o segundo lado do triângulo: "));
 const ladoC = Number(prompt("Digite o terceiro lado do triângulo: "));
 
 function eNumeroValido(){
-   return (!isNaN(ladoA) || ladoA < 0) && (!isNaN(ladoB) || ladoB < 0) && (!isNaN(ladoC) || ladoC < 0);
+   return (!isNaN(ladoA) && ladoA < 0) && (!isNaN(ladoB) && ladoB < 0) && (!isNaN(ladoC) && ladoC < 0);
 }
 
 function verificarTriangulo(){
