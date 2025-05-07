@@ -16,7 +16,6 @@ function jogar() {
     console.log("| 1. PEDRA     |");
     console.log("| 2. PAPEL     |");
     console.log("| 3. TESOURA   |");
-    console.log("| 0. SAIR      |");
     console.log("----------------");
 
     return Number(prompt("Escolha uma opção: "));
