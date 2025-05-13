@@ -10,22 +10,22 @@
 
 prompt = require('prompt-sync')();
 
-function calcularPontos(atividadesNoMes){
+function calcularPontos(atividadesNoMes) {
     let pontosGanhos = 0;
-    if(eNumeroValido(atividadesNoMes)){
-    if (atividadesNoMes < 10) {
-        pontosGanhos += atividadesNoMes * 2 ;
-    } else if (atividadesNoMes <= 20) {
-        pontosGanhos += atividadesNoMes * 5;
-    } else {
-        pontosGanhos += atividadesNoMes * 10;
+    if (eNumeroValido(atividadesNoMes)) {
+        if (atividadesNoMes < 10) {
+            pontosGanhos += atividadesNoMes * 2;
+        } else if (atividadesNoMes <= 20) {
+            pontosGanhos += atividadesNoMes * 5;
+        } else {
+            pontosGanhos += atividadesNoMes * 10;
+        }
     }
-}
-    return pontosGanhos; 
+    return pontosGanhos;
 }
 
-function calcularDinheiro(pontosGanhos){
-  return pontosGanhos * 0.05;
+function calcularDinheiro(pontosGanhos) {
+    return pontosGanhos * 0.05;
 }
 
 function eNumeroValido(numero) {
@@ -34,11 +34,11 @@ function eNumeroValido(numero) {
 
 let atividadesNoMes = prompt("Digite quantas horas de atividade você teve por mês: ");
 
-if(eNumeroValido(atividadesNoMes)){
+if (eNumeroValido(atividadesNoMes)) {
     let pontos = calcularPontos(atividadesNoMes);
     let dinheiro = calcularDinheiro(pontos);
-    
+
     console.log(`Pontos ganhos: ${pontos} pontos, dinheiro ganho: ${dinheiro.toFixed(2)} reais.`);
-}else{
-     console.log("A quantidade de horas trabalhadas no mês é um valor inválido!");
+} else {
+    console.log("A quantidade de horas trabalhadas no mês é um valor inválido!");
 }
