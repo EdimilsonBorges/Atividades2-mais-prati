@@ -17,4 +17,7 @@ function ehDataValida(dia, mes, ano){
   return true; // Data válida
 }
 
-console.log(ehDataValida(28,2,2023));
+console.log(ehDataValida(28, 2, 2023)); // true
+console.log(ehDataValida(30, 2, 2023)); // false
+console.log(ehDataValida(31, 4, 2023)); // false
+console.log(ehDataValida(29, 2, 2024)); // true (ano bissexto)
